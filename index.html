@@ -1,11 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>متجر مستلزمات الأطفال</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>موقعي — متجر مستلزمات الأطفال</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* لمسات بسيطة إضافية */
+    body { -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .product-card img{height:200px; object-fit:cover;}
+  </style>
 </head>
-<body>
-  <h1>مرحبا 👶</h1>
-  <p>هذا أول متجر تجريبي على GitHub Pages 🎉</p>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+  <!-- NAV -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold">اسم المتجر</a>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="#products" class="hover:underline">منتجات</a>
+        <a href="#about" class="hover:underline">من نحن</a>
+        <a href="#contact" class="hover:underline">تواصل</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="px-3 py-1 border rounded">تسجيل الدخول</button>
+        <button class="px-3 py-1 bg-rose-500 text-white rounded">عربة التسوق (0)</button>
+      </div>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="bg-gradient-to-r from-rose-50 to-amber-50 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 items-center">
+    <div>
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-4">أجود مستلزمات الأطفال — بكل حب</h1>
+      <p class="text-slate-600 mb-6">منتجات مختارة بعناية من الولادة حتى السنة. شحن سريع وسياسة إرجاع مرنة.</p>
+      <div class="flex gap-3">
+        <a href="#products" class="px-5 py-3 bg-rose-500 text-white rounded shadow">تسوق الآن</a>
+        <a href="#about" class="px-5 py-3 border rounded">المزيد عنّا</a>
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <img 
+        src="https://images.unsplash.com/photo-1592853625600-9572172b4a88?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" 
+        alt="happy baby" 
+        class="rounded-xl shadow-lg w-full"/>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PRODUCTS -->
+  <section id="products" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">منتجات مميزة</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- card -->
+        <article class="product-card bg-white rounded-lg shadow p-4">
+          <img src="https://images.unsplash.com/photo-1542042167277-0f5f4a6b1d4b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="حلمة" class="w-full rounded-md mb-4">
+          <h3 class="font-semibold">حمالة أطفال ناعمة</h3>
+          <p class="text-slate-500 text-sm">خامة قطن 100%، مقاسات متعددة.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="font-bold">7,500 د.ع</span>
+            <button class="px-3 py-1 bg-rose-500 text-white rounded">أضف للعربة</button>
+          </div>
+        </article>
+
+        <!-- تكرار الكروت كمثال -->
+        <article class="product-card bg-white rounded-lg shadow p-4">
+          <img src="https://images.unsplash.com/photo-1516646255117-8a4f01a7a2d8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="بطانية" class="w-full rounded-md mb-4">
+          <h3 class="font-semibold">بطانية منظمة</h3>
+          <p class="text-slate-500 text-sm">ناعمة ومناسبة للمولود الجديد.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="font-bold">12,000 د.ع</span>
+            <button class="px-3 py-1 bg-rose-500 text-white rounded">أضف للعربة</button>
+          </div>
+        </article>
+
+        <article class="product-card bg-white rounded-lg shadow p-4">
+          <img src="https://images.unsplash.com/photo-1531123414780-f2576d30f0ca?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="سرير" class="w-full rounded-md mb-4">
+          <h3 class="font-semibold">سرير محمول</h3>
+          <p class="text-slate-500 text-sm">قابل للطي وسهل الحمل.</p>
+          <div class="mt-3 flex items-center justify-between">
+            <span class="font-bold">95,000 د.ع</span>
+            <button class="px-3 py-1 bg-rose-500 text-white rounded">أضف للعربة</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4">عن المتجر</h2>
+      <p class="text-slate-600">نهدف لتقديم أفضل منتجات الأطفال مع خدمة عملاء مميزة. ضمان الجودة ورضاكم أولويتنا.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-4">تواصل معنا</h2>
+      <form class="grid grid-cols-1 gap-4">
+        <input type="text" placeholder="الاسم" class="p-3 rounded border" />
+        <input type="email" placeholder="البريد الإلكتروني" class="p-3 rounded border" />
+        <textarea placeholder="رسالتك" rows="5" class="p-3 rounded border"></textarea>
+        <div class="flex justify-end">
+          <button type="submit" class="px-5 py-3 bg-rose-500 text-white rounded">إرسال</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-200 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p>© 2025 اسم المتجر. كل الحقوق محفوظة.</p>
+      <div class="space-x-4 mt-3 md:mt-0">
+        <a href="#" class="hover:underline">شروط الاستخدام</a>
+        <a href="#" class="hover:underline">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
